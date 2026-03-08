@@ -348,6 +348,79 @@ body {
   opacity: 1;
   transform: none;
 }
+
+/* ── INJECTED IMAGE STYLES ──────────────────────────────────────────── */
+.img-banner {
+  width: 100%; height: 200px; object-fit: cover;
+  display: block; border-radius: 0;
+}
+.img-section {
+  width: 100%; height: 240px; object-fit: cover;
+  border-radius: 14px; display: block;
+  box-shadow: 0 4px 24px rgba(10,30,70,.13);
+}
+.img-card {
+  width: 100%; height: 180px; object-fit: cover;
+  border-radius: 12px 12px 0 0; display: block;
+}
+.img-inline {
+  width: 100%; height: 160px; object-fit: cover;
+  border-radius: 12px; display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 16px rgba(10,30,70,.1);
+}
+.img-float-right {
+  float: right; width: 42%; height: 200px;
+  object-fit: cover; border-radius: 12px;
+  margin: 0 0 16px 24px;
+  box-shadow: 0 4px 20px rgba(10,30,70,.12);
+}
+.img-float-left {
+  float: left; width: 42%; height: 200px;
+  object-fit: cover; border-radius: 12px;
+  margin: 0 24px 16px 0;
+  box-shadow: 0 4px 20px rgba(10,30,70,.12);
+}
+.img-half-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin: 20px 0;
+}
+.img-half-grid img {
+  width: 100%; height: 160px; object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(10,30,70,.1);
+}
+.img-caption {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-muted); margin-top: 6px; text-align: center;
+}
+.img-strip {
+  width: 100%; height: 120px; object-fit: cover;
+  border-radius: 10px; display: block;
+  box-shadow: 0 2px 10px rgba(10,30,70,.08);
+}
+.img-hero-overlay {
+  position: relative; overflow: hidden;
+  border-radius: 16px; margin-bottom: 28px;
+}
+.img-hero-overlay img {
+  width: 100%; height: 220px; object-fit: cover; display: block;
+}
+.img-hero-overlay .img-overlay-text {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(0deg, rgba(10,30,70,.75) 0%, transparent 100%);
+  color: #fff;
+}
+.img-overlay-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700; line-height: 1.2;
+}
+.img-overlay-sub {
+  font-size: 12px; opacity: .8; margin-top: 2px;
+}
+.clearfix::after { content: ''; display: table; clear: both; }
 </style>
 </head>
 <body>
@@ -474,6 +547,14 @@ body {
 
   <!-- LESSON 0 CONTENT -->
   <section class="lesson-panel" id="lesson-0" data-index="0">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&q=80&fit=crop" alt="20+ Years of Enterprise L&D Leadership" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">20+ Years of Enterprise L&D Leadership</div>
+    <div class="img-overlay-sub">Amazon · Altria · Virginia Farm Bureau</div>
+  </div>
+</div>
+
     <style>@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 #lesson-0 /* ── TOP BANNER ── */
   .top-banner {
@@ -795,6 +876,10 @@ body {
     <div class="cred-intro-text">
       This course draws on <strong>20+ years of documented enterprise L&amp;D leadership</strong> — from building a COE at Amazon reaching 1.4M+ employees, to launching AI-driven translation programs in 26+ languages, to transforming intern onboarding NPS from 76 to 96 at Altria. Every lesson is a real case study.
     </div>
+  <div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80&fit=crop" alt="L&D team collaboration" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80&fit=crop" alt="Learning strategy planning" loading="lazy">
+</div>
     <div class="cred-stat">
       <div class="cred-num" style="color: var(--blue);">653</div>
       <div class="cred-lbl">Deliverables in 2 Years</div>
@@ -825,6 +910,14 @@ body {
 
   <!-- LESSON 1 CONTENT -->
   <section class="lesson-panel" id="lesson-1" data-index="1">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80&fit=crop" alt="Learning Strategy with Real Impact" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Learning Strategy with Real Impact</div>
+    <div class="img-overlay-sub">From business problem to measurable outcome</div>
+  </div>
+</div>
+
     <style>
 #lesson-1 section { padding: 80px 0; }#lesson-1 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-1 .lesson-header-bar { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; }#lesson-1 .lhb-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 600; }#lesson-1 .lhb-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #fff; }#lesson-1 .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; color: var(--blue); }#lesson-1 .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }#lesson-1 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }#lesson-1 .section-desc { font-size: 15px; line-height: 1.75; font-weight: 300; max-width: 600px; color: #3a5068; margin-bottom: 44px; }#lesson-1 .strategy-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }#lesson-1 .case-study-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(21,101,192,0.1); border: 1px solid rgba(21,101,192,0.1); margin-bottom: 24px; }#lesson-1 .card-header { padding: 22px 28px 16px; }#lesson-1 .card-header.green { background: linear-gradient(135deg, #1b5e3b 0%, #2e8b57 100%); }#lesson-1 .card-header.blue { background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); }#lesson-1 .card-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 6px; }#lesson-1 .card-company { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 700; }#lesson-1 .card-role { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }#lesson-1 .card-
   .card-challenge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 7px; margin-top: 12px; }#lesson-1 .card-challenge.green { color: var(--green); }#lesson-1 .card-challenge.blue { color: var(--blue); }#lesson-1 .card-body p { font-size: 13px; line-height: 1.7; color: #3a5068; margin-bottom: 12px; }#lesson-1 .result-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }#lesson-1 .result-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; line-height: 1.5; color: var(--navy); }#lesson-1 .result-list li::before { content: '▸'; color: var(--gold); font-size: 11px; flex-shrink: 0; margin-top: 2px; }#lesson-1 .result-badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 20px; padding: 5px 14px; font-size: 11px; font-weight: 600; margin-top: 10px; }#lesson-1 .badge-gold { background: #fffbf0; border: 1px solid #f0d88a; color: #8b6914; }#lesson-1 .badge-green { background: #e8f5e9; border: 1px solid #81c784; color: #1b5e3b; }#lesson-1 .badge-blue { background: var(--blue-soft); border: 1px solid #90caf9; color: #1565c0; }#lesson-1 .principles-panel { background: var(--white); border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(21,101,192,0.09); border: 1px solid rgba(21,101,192,0.1); }#lesson-1 .panel-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }#lesson-1 .panel-sub { font-size: 13px; color: #5a7080; margin-bottom: 24px; }#lesson-1 .principle-block { padding: 16px 18px; border-left: 3px solid var(--gold); background: var(--blue-pale); border-radius: 0 10px 10px 0; margin-bottom: 14px; transition: all 0.2s; }#lesson-1 .principle-block:hover { background: var(--blue-soft); transform: translateX(4px); }#lesson-1 .principle-block.green-border { border-left-color: var(--green); }#lesson-1 .principle-block.blue-border { border-left-color: var(--blue); }#lesson-1 .principle-block.teal-border { border-left-color: var(--teal); }#lesson-1 .principle-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.15em; margin-bottom: 4px; }#lesson-1 .pn-gold { color: var(--gold); }#lesson-1 .pn-green { color: var(--green); }#lesson-1 .pn-blue { color: var(--blue); }#lesson-1 .pn-teal { color: var(--teal); }#lesson-1 .principle-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }#lesson-1 .principle-text { font-size: 12px; line-height: 1.65; color: #3a5068; }#lesson-1 .stats-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 44px; }#lesson-1 .stat-block { background: var(--white); border-radius: 12px; padding: 20px 18px; text-align: center; border: 1px solid rgba(21,101,192,0.12); box-shadow: 0 2px 12px rgba(21,101,192,0.06); transition: all 0.2s; }#lesson-1 .stat-block:hover { transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 6px 20px rgba(21,101,192,0.14); }#lesson-1 .stat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; line-height: 1; margin-bottom: 4px; }#lesson-1 .sn-blue { color: var(--blue); }#lesson-1 .sn-green { color: var(--green); }#lesson-1 .sn-gold { color: var(--gold); }#lesson-1 .stat-lbl { font-size: 11px; color: #5a7080; }
@@ -893,7 +986,8 @@ body {
       </div>
 
       <div>
-        <div class="principles-panel">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80&fit=crop" class="img-float-right" alt="Compliance and regulatory learning design" loading="lazy">
+<div class="clearfix"><div class="principles-panel">
           <div class="panel-title">Core Principles of Strategic L&amp;D</div>
           <p class="panel-sub">These principles emerge directly from enterprise-level practice — not theory alone.</p>
           <div class="principle-block">
@@ -921,7 +1015,7 @@ body {
     </div>
   </div>
 </section>
-    </div>
+    </div></div>
   </section>
 
   <!-- LESSON 2 DIVIDER -->
@@ -937,6 +1031,14 @@ body {
 
   <!-- LESSON 2 CONTENT -->
   <section class="lesson-panel" id="lesson-2" data-index="2">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&fit=crop" alt="Workforce Capability & Needs Analysis" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Workforce Capability & Needs Analysis</div>
+    <div class="img-overlay-sub">Diagnosing the gap before designing the solution</div>
+  </div>
+</div>
+
     <style>@keyframes growBar { from { width: 0; } }
 #lesson-2 section { padding: 80px 0; }#lesson-2 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-2 /* ── HEADER BAR ── */
   .lesson-header-bar {
@@ -1133,6 +1235,11 @@ body {
     </div>
   </section>
 
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80&fit=crop" alt="Employee onboarding programme" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=900&q=80&fit=crop" alt="Leadership facilitation workshop" loading="lazy">
+</div>
+
   <!-- LESSON 3 DIVIDER -->
   <div class="lesson-divider">
     <div class="divider-num">03</div>
@@ -1146,6 +1253,14 @@ body {
 
   <!-- LESSON 3 CONTENT -->
   <section class="lesson-panel" id="lesson-3" data-index="3">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=900&q=80&fit=crop" alt="Learning Architecture & Delivery Design" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Learning Architecture & Delivery Design</div>
+    <div class="img-overlay-sub">Choosing the right format for the right behaviour</div>
+  </div>
+</div>
+
     <style>
 #lesson-3 section { padding: 80px 0; }#lesson-3 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-3 .lesson-header-bar { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; }#lesson-3 .lhb-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 600; }#lesson-3 .lhb-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #fff; }#lesson-3 .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; color: var(--blue); }#lesson-3 .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }#lesson-3 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }#lesson-3 .section-desc { font-size: 15px; line-height: 1.75; font-weight: 300; max-width: 600px; color: #3a5068; margin-bottom: 44px; }#lesson-3 /* ── ARCH FLOW ── */
   .arch-flow { display: flex; align-items: stretch; margin-bottom: 52px; overflow: hidden; border-radius: 14px; box-shadow: 0 6px 30px rgba(21,101,192,0.12); border: 1px solid rgba(21,101,192,0.1); }#lesson-3 .arch-stage { flex: 1; padding: 28px 20px; background: var(--white); position: relative; transition: all 0.3s; }#lesson-3 .arch-stage + .arch-stage { border-left: 1px solid rgba(21,101,192,0.08); }#lesson-3 .arch-stage:hover { background: var(--lightblue); }#lesson-3 .arch-stage:hover .arch-stage-title { color: #fff; }#lesson-3 .arch-stage:hover .arch-stage-num { color: var(--gold); border-color: var(--gold); }#lesson-3 .arch-stage:hover .arch-stage-text { color: rgba(255,255,255,0.75); }#lesson-3 .arch-stage:hover .arch-channel { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); }#lesson-3 /* top accent line per stage */
@@ -1240,6 +1355,11 @@ body {
     </div>
   </section>
 
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=900&q=80&fit=crop" alt="eLearning course development" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=900&q=80&fit=crop" alt="Virtual learning delivery" loading="lazy">
+</div>
+
   <!-- LESSON 4 DIVIDER -->
   <div class="lesson-divider">
     <div class="divider-num">04</div>
@@ -1253,6 +1373,14 @@ body {
 
   <!-- LESSON 4 CONTENT -->
   <section class="lesson-panel" id="lesson-4" data-index="4">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&fit=crop" alt="AI Innovation in Learning Design" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">AI Innovation in Learning Design</div>
+    <div class="img-overlay-sub">94.7% quality · $500K saved on one module · 26+ languages</div>
+  </div>
+</div>
+
     <style>
 #lesson-4 section { padding: 80px 0; }#lesson-4 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-4 .lesson-header-bar { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--teal) 100%); padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; }#lesson-4 .lhb-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 600; }#lesson-4 .lhb-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #fff; }#lesson-4 .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; color: var(--teal); }#lesson-4 .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }#lesson-4 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }#lesson-4 .section-desc { font-size: 15px; line-height: 1.75; font-weight: 300; max-width: 600px; color: var(--text-muted); margin-bottom: 44px; }#lesson-4 /* ── AI LAYOUT ── */
   .ai-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }#lesson-4 /* ── AI CARDS ── */
@@ -1331,6 +1459,11 @@ body {
     </div>
   </section>
 
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&fit=crop" alt="AI and technology tools" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1434030216411-0b5a30b4b9be?w=900&q=80&fit=crop" alt="Global language localisation" loading="lazy">
+</div>
+
   <!-- LESSON 5 DIVIDER -->
   <div class="lesson-divider">
     <div class="divider-num">05</div>
@@ -1344,6 +1477,14 @@ body {
 
   <!-- LESSON 5 CONTENT -->
   <section class="lesson-panel" id="lesson-5" data-index="5">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&fit=crop" alt="Metrics, Measurement & Learning ROI" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Metrics, Measurement & Learning ROI</div>
+    <div class="img-overlay-sub">NPS 96 · 93% CSAT · $7.25M+ documented savings</div>
+  </div>
+</div>
+
     <style>
 #lesson-5 section { padding: 80px 0; }#lesson-5 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-5 .lesson-header-bar { background: linear-gradient(135deg, var(--green) 0%, var(--teal) 50%, var(--blue) 100%); padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; }#lesson-5 .lhb-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 600; }#lesson-5 .lhb-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #fff; }#lesson-5 .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; color: var(--gold); }#lesson-5 .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }#lesson-5 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }#lesson-5 .section-desc { font-size: 15px; line-height: 1.75; font-weight: 300; max-width: 600px; color: var(--text-body); margin-bottom: 44px; }#lesson-5 /* ── METRICS HEADER ── */
   .metrics-header { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 52px; align-items: start; }#lesson-5 /* ── FRAMEWORK ── */
@@ -1420,6 +1561,11 @@ body {
     </div>
   </section>
 
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80&fit=crop" alt="Data analytics and measurement" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80&fit=crop" alt="Learning outcomes and results" loading="lazy">
+</div>
+
   <!-- LESSON 6 DIVIDER -->
   <div class="lesson-divider">
     <div class="divider-num">06</div>
@@ -1433,6 +1579,14 @@ body {
 
   <!-- LESSON 6 CONTENT -->
   <section class="lesson-panel" id="lesson-6" data-index="6">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=900&q=80&fit=crop" alt="Learning Delivery Channels & Formats" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Learning Delivery Channels & Formats</div>
+    <div class="img-overlay-sub">eLearning · Facilitation · Performance Support · Blended</div>
+  </div>
+</div>
+
     <style>
 #lesson-6 section { padding: 72px 0; }#lesson-6 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-6 /* ── HEADER BAR ── */
   .lesson-header-bar {
@@ -1809,6 +1963,11 @@ body {
     </div>
   </section>
 
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=900&q=80&fit=crop" alt="Workshop facilitation" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80&fit=crop" alt="Performance support systems" loading="lazy">
+</div>
+
   <!-- LESSON 7 DIVIDER -->
   <div class="lesson-divider">
     <div class="divider-num">07</div>
@@ -1822,6 +1981,14 @@ body {
 
   <!-- LESSON 7 CONTENT -->
   <section class="lesson-panel" id="lesson-7" data-index="7">
+  <div class="img-hero-overlay">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80&fit=crop" alt="Managing a Global Learning Design Team" loading="lazy">
+  <div class="img-overlay-text">
+    <div class="img-overlay-title">Managing a Global Learning Design Team</div>
+    <div class="img-overlay-sub">12 IDs across Bangalore · Gdańsk · Dalian · Virtual</div>
+  </div>
+</div>
+
     <style>
 #lesson-7 section { padding: 80px 0; }#lesson-7 .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }#lesson-7 /* ── HEADER BAR ── */
   .lesson-header-bar {
@@ -2189,6 +2356,11 @@ body {
 </section>
     </div>
   </section>
+
+<div class="img-half-grid">
+  <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80&fit=crop" alt="Diverse global team" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&q=80&fit=crop" alt="Leadership and cultural intelligence" loading="lazy">
+</div>
 
   <!-- LESSON 8 DIVIDER -->
   <div class="lesson-divider">
